@@ -12,9 +12,9 @@ D3D9_DLL_NAME = "d3d9.dll"
 D3D9_DLL_URL = BASE_URL + D3D9_DLL_NAME
 MD5_CHK_URL =  D3D9_DLL_URL + ".md5sum"
 
-def download_d3d9(destination = "./"):
+def download_d3d9():
     try:
-        path,response = urllib.request.urlretrieve(D3D9_DLL_URL) # , "%s/%s" % (destination, "d3d9.dll"))
+        path,response = urllib.request.urlretrieve(D3D9_DLL_URL)
         return path
     except urllib.error.URLError as urle:
         print(urle)
